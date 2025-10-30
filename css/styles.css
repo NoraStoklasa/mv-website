@@ -4,6 +4,7 @@
   --soft-grey: #dadce0;
   --ink: #2a2340;
   --purple: #3d165d;
+  --mint-green: #f2f7ee;
   --page-max: 1800px; /* Wide container for hero */
   --content-max: 1200px; /* Narrower container for content */
   --brand-gradient: linear-gradient(
@@ -90,6 +91,15 @@ body {
   color: var(--purple);
   text-decoration: none;
   font-size: 16px;
+  padding-bottom: 4px; /* space for the border */
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.language a:hover {
+  color: #3d165d; /* your main purple */
+  border-bottom: 2px solid #3d165d;
+  cursor: pointer;
 }
 
 /* ----- Primary Navigation ----- */
@@ -103,6 +113,15 @@ body {
   color: var(--purple);
   text-decoration: none;
   font-size: 16px;
+  padding-bottom: 4px; /* space for the border */
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.primary-nav a:hover {
+  color: #3d165d; /* your main purple */
+  border-bottom: 2px solid #3d165d;
+  cursor: pointer;
 }
 
 /* ----- Hero ----- */
@@ -140,7 +159,7 @@ body {
   display: flex;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 20px 0 50px;
+  padding: 60px 0 50px;
   font-size: 20px;
   font-style: italic;
   color: var(--purple);
@@ -153,20 +172,7 @@ body {
   gap: 32px;
   align-items: start;
   max-width: var(--content-max);
-  margin: 0 auto;
-}
-
-.intro-photo {
-  margin: 0;
-}
-
-.intro-photo img {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  display: block;
-  border-radius: 8px;
-  margin-left: auto;
+  margin: 80px auto;
 }
 
 .tick-list {
@@ -205,4 +211,126 @@ h3 {
   font-weight: 600;
   font-size: 28px;
   color: var(--purple);
+}
+
+.framed-photo {
+  position: relative;
+  max-width: 400px; /* control size */
+  margin-left: auto; /* keeps it aligned to the right in your grid */
+  overflow: visible; /* we want the back layer visible */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08); /* front photo shadow */
+  background: var(--mint-green); /* so edges are clean */
+}
+
+/* the actual image */
+.framed-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* the “box behind” */
+.framed-photo::before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: 50px;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+
+  /* light diagonal pattern like in your screenshot */
+  background-image: repeating-linear-gradient(
+    45deg,
+    var(--soft-grey) 0px,
+    var(--soft-grey) 1px,
+    transparent 1px,
+    transparent 4px
+  );
+
+  background-color: var(--mint-green); /* fallback fill */
+  box-shadow: 0 20px 40px var(--soft-grey);
+
+  z-index: -1; /* sit behind the photo */
+}
+
+/* ----- Services Section ----- */
+.services {
+  margin: 80px auto;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+.service-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid rgba(42, 35, 64, 0.08);
+
+  padding: 24px;
+  box-shadow: 0 24px 40px rgba(0, 0, 0, 0.06);
+  line-height: 1.5;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 24px;
+  width: 60px;
+  height: 4px;
+
+  background-color: #dfe8cf; /* your mint */
+}
+
+.service-card:hover {
+  box-shadow: 0 28px 50px rgba(0, 0, 0, 0.12);
+  transform: translateY(-3px);
+}
+
+.services-heading {
+  font-size: 32px;
+  color: var(--purple);
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.service-card h3 {
+  color: var(--purple);
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  font-size: 16px;
+  color: var(--ink);
+}
+
+.btn-container {
+  text-align: center;
+  margin-top: 40px;
+}
+.btn-learn-more {
+  display: inline-block;
+  margin: 0 auto; /* centre it horizontally */
+  text-align: center;
+  font-family: 'Oooh Baby';
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--purple);
+  padding-bottom: 4px; /* space for bottom border */
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+  font-size: 30px;
+}
+
+.btn-learn-more:hover {
+  color: var(--purple); /* your main purple */
+  border-bottom: 2px solid var(--purple);
+  cursor: pointer;
 }
