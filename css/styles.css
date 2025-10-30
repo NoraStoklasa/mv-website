@@ -1,10 +1,17 @@
 /* ----- Variables ----- */
 :root {
-  --bg: #fffefa;
+  --beige: #fffefa;
+  --soft-grey: #dadce0;
   --ink: #2a2340;
   --purple: #3d165d;
-  --page-max: 1200px;
-  --page-pad: 24px;
+  --page-max: 1800px; /* Wide container for hero */
+  --content-max: 1200px; /* Narrower container for content */
+  --brand-gradient: linear-gradient(
+    180deg,
+    rgba(61, 22, 93, 0.08) 0%,
+    #dadce0 60%,
+    #ffffff 100%
+  );
 }
 
 /* ----- Global Styles ----- */
@@ -15,7 +22,8 @@
 }
 
 body {
-  background: linear-gradient(180deg, rgba(91, 42, 169, 0.06) 0%, #ffffff 55%);
+  background: var(--brand-gradient);
+
   color: var(--ink);
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
@@ -26,10 +34,22 @@ body {
 .container {
   max-width: var(--page-max);
   margin: 0 auto;
-  padding: 10px var(--page-pad);
+  padding: 5px 40px; /* Increased vertical padding */
+}
+
+.container-narrow {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 5px 40px; /* Increased vertical padding */
 }
 
 /* ----- Header ----- */
+
+/* Update header specific spacing */
+.header {
+  padding: 0; /* Add some vertical breathing room to header */
+}
+
 .header-container {
   display: flex;
   align-items: center;
@@ -58,18 +78,18 @@ body {
 .brand-name {
   color: var(--purple);
   font-weight: 800;
-  font-size: 15px;
+  font-size: 16px;
 }
 .brand-tag {
   color: var(--purple);
   font-weight: 400;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .language a {
   color: var(--purple);
   text-decoration: none;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 /* ----- Primary Navigation ----- */
@@ -82,13 +102,11 @@ body {
 .primary-nav .nav-list a {
   color: var(--purple);
   text-decoration: none;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 /* ----- Hero ----- */
-.hero {
-  padding: 16px 0 40px;
-}
+
 .hero-frame {
   position: relative;
   margin: 16px 0;
@@ -113,17 +131,78 @@ body {
   font-weight: 600;
   color: var(--purple);
   line-height: 1.8;
-  text-shadow: 0 1px 0 #e0d5ea;
-  font-size: 28px;
+  text-shadow: 1px 1px 3px var(--soft-grey);
+  font-size: 36px;
 }
 
 /* ----- Intro Section ----- */
 .quote {
   display: flex;
-  max-width: 800px;
-  margin: 5px auto 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 0 50px;
   font-size: 20px;
   font-style: italic;
   color: var(--purple);
   text-align: center;
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 32px;
+  align-items: start;
+  max-width: var(--content-max);
+  margin: 0 auto;
+}
+
+.intro-photo {
+  margin: 0;
+}
+
+.intro-photo img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  margin-left: auto;
+}
+
+.tick-list {
+  margin: 16px 0;
+  padding-left: 30px;
+}
+
+.tick-list li {
+  margin-bottom: 8px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 16px;
+  color: var(--purple);
+}
+
+.intro-statement {
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: var(--purple);
+}
+
+.intro-conclusion {
+  padding-top: 40px;
+  padding-bottom: 60px;
+  font-family: 'Oooh Baby';
+  font-weight: 600;
+  font-size: 28px;
+  color: var(--purple);
 }
