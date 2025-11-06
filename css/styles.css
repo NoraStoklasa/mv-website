@@ -126,12 +126,18 @@ body {
 
 /* ----- Hero ----- */
 
+.hero .container {
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
 .hero-frame {
   position: relative;
-  margin: 16px 0;
   width: 100%;
   aspect-ratio: 16/9;
   overflow: hidden;
+  margin: 0; /* Remove margin */
 }
 .hero-img {
   position: absolute;
@@ -151,7 +157,8 @@ body {
   color: var(--purple);
   line-height: 1.8;
   text-shadow: 1px 1px 3px var(--soft-grey);
-  font-size: 36px;
+  font-size: clamp(24px, 4vw, 36px); /* Make font size responsive */
+  z-index: 2; /* Ensure text stays above image */
 }
 
 /* ----- Intro Section ----- */
@@ -189,8 +196,29 @@ body {
 
 h2 {
   font-size: 28px;
+}
+
+.intro .intro-text h2 {
   margin-bottom: 16px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
   color: var(--purple);
+}
+
+.intro .intro-text h2::after {
+  content: '';
+  position: absolute;
+  left: 0%; /* start a bit before the text */
+  bottom: 0;
+  width: 80%; /* run past the end of the text */
+  height: 12px; /* thicker = more visible */
+  background: linear-gradient(
+    90deg,
+    var(--mint, #dfe8cf) 0%,
+    var(--mint, #dfe8cf) 85%,
+    rgba(223, 232, 207, 0) 100%
+  );
 }
 
 .intro-statement {
@@ -237,7 +265,6 @@ h3 {
   left: 50px;
   width: 100%;
   height: 100%;
-  border-radius: 4px;
 
   /* light diagonal pattern like in your screenshot */
   background-image: repeating-linear-gradient(
