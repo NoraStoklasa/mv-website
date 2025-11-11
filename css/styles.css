@@ -142,14 +142,12 @@ body {
   width: 100%;
   max-width: var(--width-max); /* same as header container */
   margin: 0 auto; /* centre within the page */
-  aspect-ratio: 16/9;
   overflow: hidden;
 }
 
 /* keep these as you have */
 .hero__image {
   width: 100%;
-  height: 100%;
   object-fit: cover;
   display: block;
 }
@@ -483,7 +481,7 @@ h3 {
   margin: 0;
   font-size: 1rem;
   line-height: 1.7;
-  colour: var(--color-ink, #2a2340);
+  color: var(--color-ink, #2a2340);
 }
 .testimonial-card figcaption {
   margin-top: var(--spacing-lg, 16px);
