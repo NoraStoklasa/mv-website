@@ -349,10 +349,10 @@ body {
   display: grid;
   grid-template-columns: minmax(320px, 1fr) 1fr; /* left column a bit narrower */
   grid-auto-rows: auto;
-  gap: var(--spacing-xl) var(--spacing-2xl);
+  gap: var(--spacing-xl);
   align-items: start;
-  margin-block: var(--spacing-3xl);
-  padding-inline: var(--spacing-3xl);
+  margin-block: var(--spacing-2xl);
+  padding-inline: var(--spacing-6xl);
 }
 
 /* Headings on the left, first row */
@@ -366,13 +366,10 @@ body {
 
 /* Images and text/list share row 2 */
 .section-image {
+  display: block;
   width: 100%;
   height: auto;
-  display: block;
-  grid-row: 2;
-  padding-left: var(--spacing-2xl);
-  padding-right: var(--spacing-2xl);
-  padding-inline: var(--spacing-4xl);
+  border-radius: 20px;
 }
 
 /* Default */
