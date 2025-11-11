@@ -1,43 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="stylesheet" href="css/styles.css" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Oooh+Baby&family=Roboto:wght@400;600;800&display=swap"
       rel="stylesheet"
     />
     <title>Michaela Valik — Balance Your Lifestyle</title>
   </head>
   <body>
-    <!-- Header Section -->
     <header class="header">
-      <div class="container header-container">
-        <a href="#" class="brand-link">
+      <div class="container header__content">
+        <!-- left: brand -->
+        <a class="brand" href="#">
           <img
-            class="mv-logo"
+            class="brand__logo"
             src="assets/logo.png"
-            alt="Michaela Valik Nutritionist Logo MV"
+            alt="Michaela Valik logo"
           />
-          <div class="mv-brand-name">
-            <span class="brand-name">MICHAELA VALIK</span>
-            <span class="brand-tag">Balance Your Lifestyle</span>
+          <div class="brand__text">
+            <span class="brand__name">MICHAELA VALIK</span>
+            <span class="brand__tagline">Balance Your Lifestyle</span>
           </div>
         </a>
-        <div class="language">
-          <p>
-            <a href="#">EN</a> |
-            <a href="#">CS</a>
-          </p>
+
+        <!-- center: language selector (EN | CS) -->
+        <div class="language-select" aria-label="Language selection">
+          <a href="#en">EN</a> <span aria-hidden="true">|</span>
+          <a href="#cs">CS</a>
         </div>
 
-        <nav class="primary-nav">
-          <ul class="nav-list">
-            <li><a href="#about">HOME</a></li>
+        <!-- right: navigation -->
+        <nav class="primary-nav" aria-label="Primary navigation">
+          <ul class="nav__list">
+            <li><a href="#top">HOME</a></li>
             <li><a href="#services">SERVICES</a></li>
             <li><a href="#about">ABOUT ME</a></li>
             <li><a href="#contact">CONTACT</a></li>
@@ -46,46 +46,43 @@
       </div>
     </header>
 
-    <!-- Main Content -->
-    <main>
-      <!-- Hero Section -->
+    <main id="top">
+      <!-- hero is full-width edge-to-edge -->
       <section class="hero">
-        <div class="container">
-          <div class="hero-frame">
-            <img src="assets/images/hero.png" alt="" class="hero-img" />
-
-            <div class="hero-content">
-              <p>Do you want to lose weight without dieting?</p>
-              <p>Do you want more energy every day?</p>
-              <p>
-                Do you want to create healthy habits that fit your lifestyle?
-              </p>
-            </div>
+        <div class="hero__frame">
+          <img
+            class="hero__image"
+            src="assets/images/hero.png"
+            alt="Hero: Michaela Valik"
+          />
+          <div class="hero__text" aria-hidden="false">
+            <p>Do you want to lose weight without dieting?</p>
+            <p>Do you want more energy every day?</p>
+            <p>Do you want to create healthy habits that fit your lifestyle?</p>
           </div>
         </div>
       </section>
 
-      <!-- Intro Section -->
       <section class="intro">
         <div class="container-narrow">
-          <p class="quote">
+          <blockquote class="intro__quote">
             “Healthy eating doesn’t have to be complicated. It’s all about
             balance, enjoying your food, and feeling your best every day—with
             personalised plans that work for YOU.”
-          </p>
+          </blockquote>
 
-          <div class="intro-grid">
-            <div class="intro-text">
-              <h2>Welcome to MV Nutrition</h2>
-              <p class="intro-statement">
+          <div class="intro__grid">
+            <div class="intro__content">
+              <h2 class="intro__heading">Welcome to MV Nutrition</h2>
+              <p class="intro__description">
                 I help you achieve sustainable results by building a healthy
                 relationship with food and making mindful lifestyle adjustments.
-                Together, we’ll address the mental, emotional, and physical
+                Together, we'll address the mental, emotional, and physical
                 aspects of eating to create lasting change.
               </p>
 
               <h3>How I Can Help You:</h3>
-              <ul class="tick-list">
+              <ul class="intro__list">
                 <li>Lose weight without restrictive diets</li>
                 <li>Boost your energy</li>
                 <li>Build healthy eating habits</li>
@@ -94,24 +91,30 @@
                 <li>Feel your best with expert tips and advice</li>
               </ul>
 
-              <p class="intro-conclusion">
+              <p class="intro__cta">
                 Balance your lifestyle with a plan that works for YOU!
               </p>
             </div>
-            <figure class="intro-photo framed-photo">
+
+            <figure class="photo-frame" aria-hidden="true">
               <img
+                class="photo-frame__image"
                 src="assets/images/intro.jpg"
-                alt="Michaela Valik holding a laptop and smiling"
+                alt="Michaela Valik smiling"
               />
             </figure>
           </div>
-          <section class="services">
-            <h2 class="services-heading">Services</h2>
 
-            <!-- Services cards added under the intro grid -->
-            <div class="services-grid">
-              <article class="service-card">
-                <h3>Initial Consultation</h3>
+          <section
+            class="services"
+            id="services"
+            aria-labelledby="services-heading"
+          >
+            <h2 id="services-heading" class="section-heading">Services</h2>
+
+            <div class="services__grid">
+              <article class="service-card" aria-labelledby="svc1">
+                <h3 id="svc1">Initial Consultation</h3>
                 <p>
                   Let’s start with an in‑depth analysis of your current eating
                   habits, goals, and lifestyle. Together, we’ll develop a
@@ -119,8 +122,8 @@
                 </p>
               </article>
 
-              <article class="service-card">
-                <h3>One‑on‑One Coaching (4 Weeks)</h3>
+              <article class="service-card" aria-labelledby="svc2">
+                <h3 id="svc2">One‑on‑One Coaching (4 Weeks)</h3>
                 <p>
                   This 4‑week program includes personalised meal plans, weekly
                   check‑ins and ongoing support to build sustainable habits and
@@ -128,20 +131,190 @@
                 </p>
               </article>
 
-              <article class="service-card">
-                <h3>Macrocoaching</h3>
+              <article class="service-card" aria-labelledby="svc3">
+                <h3 id="svc3">Macrocoaching</h3>
                 <p>
                   Learn to balance protein, fats, and carbs for optimal energy
                   and performance—without restrictive tracking.
                 </p>
               </article>
             </div>
-            <div class="btn-container">
-              <a href="#contact" class="btn-learn-more">Learn More</a>
+
+            <div class="cta-container">
+              <a class="cta-link" href="#contact">Learn More</a>
+            </div>
+          </section>
+
+          <section id="philosophy-approach" class="focus">
+            <section id="philosophy" class="section-grid philosophy">
+              <h2 class="section-title">My Philosophy</h2>
+
+              <img
+                class="section-image philosophy-image"
+                src="assets/images/philosophy.jpg"
+                alt="Calm interior"
+              />
+
+              <p class="section-text">
+                At MV Nutrition, I believe that nutrition goes beyond food —
+                it’s about creating a lifestyle that works for YOU.
+              </p>
+            </section>
+
+            <section id="approach" class="section-grid approach">
+              <h2 class="section-title">My Approach</h2>
+
+              <ul class="section-list">
+                <li>
+                  <strong>Small Changes, Big Impact:</strong> Simple, manageable
+                  adjustments that lead to long-term success.
+                </li>
+                <li>
+                  <strong>Mindful Eating:</strong> Nourish your body while
+                  enjoying food guilt-free.
+                </li>
+                <li>
+                  <strong>Sustainable Habits:</strong> No restrictive diets or
+                  extremes—just realistic strategies that work.
+                </li>
+                <li>
+                  <strong>Practical Support:</strong> Accessible, personalised
+                  solutions for busy individuals and families.
+                </li>
+              </ul>
+
+              <img
+                class="section-image approach-image"
+                src="assets/images/approach.jpg"
+                alt="Preparing healthy meal"
+              />
+            </section>
+          </section>
+
+          <section id="testimonials" class="section testimonials">
+            <div class="container">
+              <h2 class="section-title centre">What clients say</h2>
+
+              <div class="testimonials__grid">
+                <figure class="testimonial-card">
+                  <div class="stars" aria-label="5 out of 5 stars">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path
+                        d="M12 17.3l-6.16 3.46 1.18-6.88L1.99 8.8l6.9-1 3.09-6.27 3.09 6.27 6.9 1-4.99 5.08 1.18 6.88z"
+                      />
+                    </svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path
+                        d="M12 17.3l-6.16 3.46 1.18-6.88L1.99 8.8l6.9-1 3.09-6.27 3.09 6.27 6.9 1-4.99 5.08 1.18 6.88z"
+                      />
+                    </svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path
+                        d="M12 17.3l-6.16 3.46 1.18-6.88L1.99 8.8l6.9-1 3.09-6.27 3.09 6.27 6.9 1-4.99 5.08 1.18 6.88z"
+                      />
+                    </svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path
+                        d="M12 17.3l-6.16 3.46 1.18-6.88L1.99 8.8l6.9-1 3.09-6.27 3.09 6.27 6.9 1-4.99 5.08 1.18 6.88z"
+                      />
+                    </svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path
+                        d="M12 17.3l-6.16 3.46 1.18-6.88L1.99 8.8l6.9-1 3.09-6.27 3.09 6.27 6.9 1-4.99 5.08 1.18 6.88z"
+                      />
+                    </svg>
+                  </div>
+                  <blockquote>
+                    After years of restrictive diets and yo-yo effects, I sought
+                    professional help. Michaela created a flexible, balanced
+                    plan that made a huge difference. I now enjoy food without
+                    guilt and feel healthier and more confident!
+                  </blockquote>
+                  <figcaption>— Sophie L.</figcaption>
+                </figure>
+
+                <figure class="testimonial-card">
+                  <div class="stars" aria-label="5 out of 5 stars">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path
+                        d="M12 17.3l-6.16 3.46 1.18-6.88L1.99 8.8l6.9-1 3.09-6.27 3.09 6.27 6.9 1-4.99 5.08 1.18 6.88z"
+                      /></svg
+                    ><svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path
+                        d="M12 17.3l-6.16 3.46 1.18-6.88L1.99 8.8l6.9-1 3.09-6.27 3.09 6.27 6.9 1-4.99 5.08 1.18 6.88z"
+                      /></svg
+                    ><svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path
+                        d="M12 17.3l-6.16 3.46 1.18-6.88L1.99 8.8l6.9-1 3.09-6.27 3.09 6.27 6.9 1-4.99 5.08 1.18 6.88z"
+                      /></svg
+                    ><svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path
+                        d="M12 17.3l-6.16 3.46 1.18-6.88L1.99 8.8l6.9-1 3.09-6.27 3.09 6.27 6.9 1-4.99 5.08 1.18 6.88z"
+                      /></svg
+                    ><svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path
+                        d="M12 17.3l-6.16 3.46 1.18-6.88L1.99 8.8l6.9-1 3.09-6.27 3.09 6.27 6.9 1-4.99 5.08 1.18 6.88z"
+                      />
+                    </svg>
+                  </div>
+                  <blockquote>
+                    Michaela is the best! She designed a stress-free,
+                    sustainable plan that helped me reach my goals faster than
+                    expected. I sleep better, have more energy, and feel
+                    amazing. Highly recommend her!
+                  </blockquote>
+                  <figcaption>— Peter H.</figcaption>
+                </figure>
+
+                <figure class="testimonial-card">
+                  <div class="stars" aria-label="5 out of 5 stars">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path
+                        d="M12 17.3l-6.16 3.46 1.18-6.88L1.99 8.8l6.9-1 3.09-6.27 3.09 6.27 6.9 1-4.99 5.08 1.18 6.88z"
+                      /></svg
+                    ><svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path
+                        d="M12 17.3l-6.16 3.46 1.18-6.88L1.99 8.8l6.9-1 3.09-6.27 3.09 6.27 6.9 1-4.99 5.08 1.18 6.88z"
+                      /></svg
+                    ><svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path
+                        d="M12 17.3l-6.16 3.46 1.18-6.88L1.99 8.8l6.9-1 3.09-6.27 3.09 6.27 6.9 1-4.99 5.08 1.18 6.88z"
+                      /></svg
+                    ><svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path
+                        d="M12 17.3l-6.16 3.46 1.18-6.88L1.99 8.8l6.9-1 3.09-6.27 3.09 6.27 6.9 1-4.99 5.08 1.18 6.88z"
+                      /></svg
+                    ><svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path
+                        d="M12 17.3l-6.16 3.46 1.18-6.88L1.99 8.8l6.9-1 3.09-6.27 3.09 6.27 6.9 1-4.99 5.08 1.18 6.88z"
+                      />
+                    </svg>
+                  </div>
+                  <blockquote>
+                    Michaela’s 3-month plan was life-changing! I finally feel
+                    confident in my body. Her easy, delicious meal plans helped
+                    me lose weight and keep it off. I now understand nutrition
+                    and have more energy than ever!
+                  </blockquote>
+                  <figcaption>— Nora S.</figcaption>
+                </figure>
+              </div>
             </div>
           </section>
         </div>
       </section>
     </main>
+    <footer class="site-footer" aria-label="Footer">
+      <div class="container">
+        <nav aria-label="Footer navigation">
+          <ul class="footer__nav">
+            <li><a href="#top">HOME</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#about">ABOUT ME</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
   </body>
 </html>

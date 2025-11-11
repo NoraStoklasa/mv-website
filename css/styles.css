@@ -1,21 +1,45 @@
 /* ----- Variables ----- */
 :root {
-  --beige: #fffefa;
-  --soft-grey: #dadce0;
-  --ink: #2a2340;
-  --purple: #3d165d;
-  --mint-green: #f2f7ee;
-  --page-max: 1800px; /* Wide container for hero */
-  --content-max: 1200px; /* Narrower container for content */
-  --brand-gradient: linear-gradient(
-    180deg,
-    rgba(61, 22, 93, 0.08) 0%,
-    #dadce0 60%,
-    #ffffff 100%
-  );
+  /* Colors */
+  --color-beige: #fffefa;
+  --color-grey: #e5e6ea;
+  --color-ink: #2a2340;
+  --color-purple: #3d165d;
+  --color-mint: #e8f3e2;
+  --color-white: #ffffff;
+  --color-border: rgba(42, 35, 64, 0.08);
+
+  /* Typography */
+  --font-primary: 'Roboto', sans-serif;
+  --font-display: 'Oooh Baby', cursive;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 22px;
+  --font-size-3xl: 28px;
+  --font-size-4xl: 32px;
+  --font-size-hero: clamp(24px, 4vw, 36px);
+  --font-size-cta: 40px;
+
+  /* Layout */
+  --width-max: 1800px;
+  --width-content: 1200px;
+  --spacing-xs: 2px;
+  --spacing-sm: 4px;
+  --spacing-md: 8px;
+  --spacing-lg: 12px;
+  --spacing-xl: 16px;
+  --spacing-2xl: 24px;
+  --spacing-3xl: 32px;
+  --spacing-4xl: 40px;
+  --spacing-5xl: 60px;
+  --spacing-6xl: 80px;
+
+  /* Transitions */
+  --transition: all 0.2s ease;
 }
 
-/* ----- Global Styles ----- */
+/* ----- Reset ----- */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -23,295 +47,283 @@
 }
 
 body {
-  background: var(--brand-gradient);
-
-  color: var(--ink);
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+  background: var(--color-grey);
+  color: var(--color-ink);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
   line-height: 1.45;
 }
 
-/* ----- Layout container ----- */
+/* ----- Layout ----- */
 .container {
-  max-width: var(--page-max);
+  max-width: var(--width-max);
   margin: 0 auto;
-  padding: 5px 40px; /* Increased vertical padding */
+  padding: var(--spacing-md) var(--spacing-4xl);
 }
 
 .container-narrow {
-  max-width: var(--content-max);
+  max-width: var(--width-content);
   margin: 0 auto;
-  padding: 5px 40px; /* Increased vertical padding */
+  padding: var(--spacing-md) var(--spacing-4xl);
 }
 
 /* ----- Header ----- */
-
-/* Update header specific spacing */
 .header {
-  padding: 0; /* Add some vertical breathing room to header */
+  padding: var(--spacing-md) 0;
+  background: var(--color-white);
 }
 
-.header-container {
-  display: flex;
+.header__content {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  justify-content: space-between;
-  gap: 24px;
+  gap: var(--spacing-2xl);
+  width: 100%;
 }
 
-.brand-link {
+.brand {
   display: flex;
   align-items: center;
-  gap: 12px;
-  color: var(--purple);
+  gap: var(--spacing-lg);
+  color: var(--color-purple);
   text-decoration: none;
 }
-.mv-logo {
+
+.brand__logo {
   width: 60px;
   height: auto;
-  display: block;
 }
-.mv-brand-name {
+
+.brand__text {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 2px;
+  gap: var(--spacing-xs);
 }
-.brand-name {
-  color: var(--purple);
+
+.brand__name {
   font-weight: 800;
-  font-size: 16px;
+  font-size: var(--font-size-base);
+  color: var(--color-purple);
 }
-.brand-tag {
-  color: var(--purple);
+
+.brand__tagline {
   font-weight: 400;
   font-size: 10px;
+  color: var(--color-purple);
 }
 
-.language a {
-  color: var(--purple);
-  text-decoration: none;
-  font-size: 16px;
-  padding-bottom: 4px; /* space for the border */
-  border-bottom: 2px solid transparent;
-  transition: color 0.2s ease, border-color 0.2s ease;
-}
-
-.language a:hover {
-  color: #3d165d; /* your main purple */
-  border-bottom: 2px solid #3d165d;
-  cursor: pointer;
-}
-
-/* ----- Primary Navigation ----- */
-.primary-nav .nav-list {
-  list-style: none;
+/* ----- Navigation ----- */
+.nav__list,
+.language-select {
   display: flex;
-  gap: 16px;
-  align-items: center;
-}
-.primary-nav .nav-list a {
-  color: var(--purple);
-  text-decoration: none;
-  font-size: 16px;
-  padding-bottom: 4px; /* space for the border */
-  border-bottom: 2px solid transparent;
-  transition: color 0.2s ease, border-color 0.2s ease;
+  gap: var(--spacing-xl);
+  list-style: none;
+  justify-content: center;
 }
 
-.primary-nav a:hover {
-  color: #3d165d; /* your main purple */
-  border-bottom: 2px solid #3d165d;
-  cursor: pointer;
+.nav__list a,
+.language-select a {
+  color: var(--color-purple);
+  text-decoration: none;
+  font-size: var(--font-size-base);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 2px solid transparent;
+  transition: var(--transition);
+}
+
+.nav__list a:hover,
+.language-select a:hover {
+  border-bottom-color: var(--color-purple);
 }
 
 /* ----- Hero ----- */
-
-.hero .container {
-  max-width: 100%;
-  padding: 0;
-  margin: 0;
+.hero {
+  width: 100%;
 }
 
-.hero-frame {
+.hero__frame {
   position: relative;
-  width: 100%;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
   aspect-ratio: 16/9;
   overflow: hidden;
-  margin: 0; /* Remove margin */
 }
-.hero-img {
+
+.hero__image {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: top;
-  display: block;
 }
-.hero-content {
+
+.hero__text {
   position: absolute;
   right: 9%;
   top: 10%;
-  font-family: 'Oooh Baby';
+  font-family: var(--font-display);
+  font-size: var(--font-size-hero);
   font-weight: 600;
-  color: var(--purple);
+  color: var(--color-purple);
   line-height: 1.8;
-  text-shadow: 1px 1px 3px var(--soft-grey);
-  font-size: clamp(24px, 4vw, 36px); /* Make font size responsive */
-  z-index: 2; /* Ensure text stays above image */
+  text-shadow: 1px 1px 3px var(--color-grey);
+  z-index: 2;
 }
 
 /* ----- Intro Section ----- */
-.quote {
-  display: flex;
+.intro__quote {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 60px 0 50px;
-  font-size: 20px;
+  padding: var(--spacing-5xl) 0;
+  font-size: var(--font-size-xl);
   font-style: italic;
-  color: var(--purple);
+  color: var(--color-purple);
   text-align: center;
 }
 
-.intro-grid {
+.intro__grid {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  gap: 32px;
+  gap: var(--spacing-3xl);
   align-items: start;
-  max-width: var(--content-max);
-  margin: 80px auto;
+  margin: var(--spacing-6xl) auto;
 }
 
-.tick-list {
-  margin: 16px 0;
-  padding-left: 30px;
-}
-
-.tick-list li {
-  margin-bottom: 8px;
-  font-size: 18px;
-  line-height: 1.6;
-  color: var(--ink);
-}
-
-h2 {
-  font-size: 28px;
-}
-
-.intro .intro-text h2 {
-  margin-bottom: 16px;
+.intro__heading {
+  margin-bottom: var(--spacing-xl);
   position: relative;
   display: inline-block;
-  padding-bottom: 10px;
-  color: var(--purple);
+  padding-bottom: var(--spacing-lg);
+  font-size: var(--font-size-3xl);
+  color: var(--color-purple);
 }
 
-.intro .intro-text h2::after {
+.intro__heading::after {
   content: '';
   position: absolute;
-  left: 0%; /* start a bit before the text */
+  left: 0;
   bottom: 0;
-  width: 80%; /* run past the end of the text */
-  height: 12px; /* thicker = more visible */
+  width: 80%;
+  height: 12px;
   background: linear-gradient(
     90deg,
-    var(--mint, #dfe8cf) 0%,
-    var(--mint, #dfe8cf) 85%,
-    rgba(223, 232, 207, 0) 100%
+    var(--color-mint) 0%,
+    var(--color-mint) 85%,
+    rgba(242, 247, 238, 0) 100%
   );
 }
 
-.intro-statement {
-  font-size: 18px;
-  margin-bottom: 24px;
+.intro__description {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-2xl);
 }
 
-h3 {
-  font-size: 22px;
-  margin-bottom: 12px;
-  color: var(--purple);
+.intro__list {
+  margin: var(--spacing-xl) 0;
+  padding-left: var(--spacing-4xl);
+  list-style: none;
 }
 
-.intro-conclusion {
-  padding-top: 40px;
-  padding-bottom: 60px;
-  font-family: 'Oooh Baby';
+.intro__list li::before {
+  content: '⊹';
+  display: inline-block;
+  width: 1.5em;
+}
+
+.intro__list li {
+  margin-bottom: var(--spacing-md);
+  font-size: var(--font-size-lg);
+  line-height: 1.6;
+}
+
+.intro__cta {
+  padding-top: var(--spacing-xl);
+  padding-bottom: var(--spacing-5xl);
+  font-family: var(--font-display);
   font-weight: 600;
-  font-size: 28px;
-  color: var(--purple);
+  font-size: var(--font-size-3xl);
+  color: var(--color-purple);
 }
 
-.framed-photo {
+/* ----- Photo Frame ----- */
+.photo-frame {
   position: relative;
-  max-width: 400px; /* control size */
-  margin-left: auto; /* keeps it aligned to the right in your grid */
-  overflow: visible; /* we want the back layer visible */
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08); /* front photo shadow */
-  background: var(--mint-green); /* so edges are clean */
+  max-width: 400px;
+  margin-left: auto;
+  overflow: visible;
 }
 
-/* the actual image */
-.framed-photo img {
+.photo-frame__image {
   display: block;
   width: 100%;
   height: auto;
+  background: var(--color-mint);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border-radius: 9999px 9999px 0 0;
 }
 
-/* the “box behind” */
-.framed-photo::before {
+.photo-frame::before {
   content: '';
   position: absolute;
   top: -30px;
   left: 50px;
   width: 100%;
   height: 100%;
-
-  /* light diagonal pattern like in your screenshot */
   background-image: repeating-linear-gradient(
     45deg,
-    var(--soft-grey) 0px,
-    var(--soft-grey) 1px,
+    var(--color-grey) 0px,
+    var(--color-grey) 1px,
     transparent 1px,
     transparent 4px
   );
-
-  background-color: var(--mint-green); /* fallback fill */
-  box-shadow: 0 20px 40px var(--soft-grey);
-
-  z-index: -1; /* sit behind the photo */
+  background-color: var(--color-mint);
+  box-shadow: 0 20px 40px var(--color-grey);
+  z-index: -1;
+  border-radius: 9999px 9999px 0 0;
 }
 
 /* ----- Services Section ----- */
 .services {
-  margin: 80px auto;
+  margin: var(--spacing-6xl) auto;
 }
 
-.services-grid {
+.section-heading {
+  font-size: var(--font-size-4xl);
+  color: var(--color-purple);
+  margin-bottom: var(--spacing-2xl);
+  text-align: center;
+}
+
+.services__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 32px;
+  gap: var(--spacing-3xl);
+  margin-bottom: var(--spacing-4xl);
 }
 
 .service-card {
   position: relative;
-  background: #ffffff;
-  border: 1px solid rgba(42, 35, 64, 0.08);
-
-  padding: 24px;
+  padding: var(--spacing-2xl);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
   box-shadow: 0 24px 40px rgba(0, 0, 0, 0.06);
   line-height: 1.5;
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  transition: var(--transition);
 }
 
 .service-card::before {
   content: '';
   position: absolute;
   top: 0;
-  left: 24px;
+  left: var(--spacing-2xl);
   width: 60px;
   height: 4px;
-
-  background-color: #dfe8cf; /* your mint */
+  background-color: var(--color-mint);
 }
 
 .service-card:hover {
@@ -319,45 +331,202 @@ h3 {
   transform: translateY(-3px);
 }
 
-.services-heading {
-  font-size: 32px;
-  color: var(--purple);
-  margin-bottom: 24px;
-  text-align: center;
-}
-
 .service-card h3 {
-  color: var(--purple);
-  font-size: 20px;
+  font-size: var(--font-size-xl);
   font-weight: 600;
-  margin-bottom: 12px;
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-purple);
 }
 
 .service-card p {
-  font-size: 16px;
-  color: var(--ink);
+  font-size: var(--font-size-base);
+  color: var(--color-ink);
 }
 
-.btn-container {
-  text-align: center;
-  margin-top: 40px;
+/* ----- Philosophy + Approach Section ----- */
+/* Generic two-row section grid */
+.section-grid {
+  display: grid;
+  grid-template-columns: minmax(320px, 1fr) 1fr; /* left column a bit narrower */
+  grid-auto-rows: auto;
+  gap: var(--spacing-xl) var(--spacing-2xl);
+  align-items: start;
+  margin-block: var(--spacing-3xl);
+  padding-inline: var(--spacing-3xl);
 }
-.btn-learn-more {
+
+/* Headings on the left, first row */
+.focus .section-title {
+  grid-column: 1 / -1; /* span both columns */
+  text-align: center; /* centre the text */
+  justify-self: center; /* centre the box itself in the grid */
+  margin-top: var(--spacing-6xl);
+  margin-bottom: var(--spacing-4xl);
+}
+
+/* Images and text/list share row 2 */
+.section-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  grid-row: 2;
+  padding-left: var(--spacing-2xl);
+  padding-right: var(--spacing-2xl);
+  padding-inline: var(--spacing-4xl);
+}
+
+/* Default */
+.section-text,
+.section-list {
+  grid-column: 2; /* right column */
+  grid-row: 2;
+  margin: auto;
+  padding-inline: var(--spacing-2xl);
+}
+
+/* PHILOSOPHY */
+.philosophy-image {
+  grid-column: 1;
+}
+.philosophy .section-text {
+  grid-column: 2;
+}
+
+/* APPROACH */
+.approach .section-list {
+  grid-column: 1;
+}
+.approach-image {
+  grid-column: 2;
+}
+
+.focus {
+  position: relative;
+  margin: var(--spacing-6xl) 0;
+  padding: var(--spacing-4xl) var(--spacing-3xl);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 9999px 9999px 0 0;
+  box-shadow: 0 24px 40px rgba(0, 0, 0, 0.06);
+}
+
+.focus .section-grid {
+  margin-block: var(--spacing-2xl);
+}
+
+/* ----- CTA ----- */
+.cta-container {
+  text-align: center;
+}
+
+.cta-link {
   display: inline-block;
-  margin: 0 auto; /* centre it horizontally */
-  text-align: center;
-  font-family: 'Oooh Baby';
-  text-decoration: none;
+  font-family: var(--font-display);
+  font-size: var(--font-size-cta);
   font-weight: 600;
-  color: var(--purple);
-  padding-bottom: 4px; /* space for bottom border */
+  color: var(--color-purple);
+  text-decoration: none;
+  padding-bottom: var(--spacing-sm);
   border-bottom: 2px solid transparent;
-  transition: color 0.2s ease, border-color 0.2s ease;
-  font-size: 30px;
+  transition: var(--transition);
 }
 
-.btn-learn-more:hover {
-  color: var(--purple); /* your main purple */
-  border-bottom: 2px solid var(--purple);
-  cursor: pointer;
+.cta-link:hover {
+  border-bottom-color: var(--color-purple);
+}
+
+/* ----- Headings ----- */
+h2 {
+  font-size: var(--font-size-4xl);
+  color: var(--color-purple);
+  margin-bottom: var(--spacing-2xl);
+  text-align: center;
+}
+
+h3 {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-purple);
+}
+
+/* TEstimonials */
+.testimonials {
+  padding-block: var(--spacing-3xl, 64px);
+}
+
+/* Title centred like your other sections */
+.section-title.centre {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl, 32px);
+}
+
+/* Grid (static, no movement) */
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--spacing-xl, 24px);
+}
+
+/* Card */
+.testimonial-card {
+  background: var(--color-white, #fff);
+  border: 1px solid var(--color-border, #e8e6ee);
+  border-radius: 20px;
+  padding: var(--spacing-xl, 24px);
+  box-shadow: 0 24px 40px rgba(0, 0, 0, 0.06);
+}
+
+/* Stars in your purple */
+.testimonial-card .stars {
+  display: inline-flex;
+  gap: 6px;
+  margin-bottom: var(--spacing-md, 12px);
+}
+.testimonial-card .stars svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--color-purple, #3d165d); /* your brand purple */
+}
+
+/* Quote + author */
+.testimonial-card blockquote {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.7;
+  colour: var(--color-ink, #2a2340);
+}
+.testimonial-card figcaption {
+  margin-top: var(--spacing-lg, 16px);
+  font-weight: 600;
+  color: var(--color-purple, #3d165d);
+}
+
+/* ----- Footer ----- */
+.site-footer {
+  background: var(--color-white);
+  border-top: 1px solid var(--color-border);
+  padding: var(--spacing-3xl) 0;
+  margin-top: var(--spacing-6xl);
+}
+
+.footer__nav {
+  display: flex;
+  gap: var(--spacing-2xl);
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer__nav a {
+  color: var(--color-purple);
+  text-decoration: none;
+  font-weight: 400;
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 2px solid transparent;
+  transition: var(--transition);
+}
+
+.footer__nav a:hover {
+  border-bottom-color: var(--color-purple);
 }
