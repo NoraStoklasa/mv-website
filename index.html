@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <title>Michaela Valik — Balance Your Lifestyle</title>
+    <script src="scripts/menu.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -28,21 +29,41 @@
           </div>
         </a>
 
-        <!-- center: language selector (EN | CS) -->
-        <div class="language-select" aria-label="Language selection">
-          <a href="#en">EN</a> <span aria-hidden="true">|</span>
-          <a href="#cs">CS</a>
-        </div>
+        <!-- Mobile menu toggle -->
+        <input
+          type="checkbox"
+          id="mobile-menu-toggle"
+          class="mobile-menu-toggle"
+          aria-label="Toggle mobile menu"
+        />
+        <label
+          for="mobile-menu-toggle"
+          class="mobile-menu-icon"
+          aria-label="Menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
 
-        <!-- right: navigation -->
-        <nav class="primary-nav" aria-label="Primary navigation">
-          <ul class="nav__list">
-            <li><a href="#top">HOME</a></li>
-            <li><a href="#services">SERVICES</a></li>
-            <li><a href="#about">ABOUT ME</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-          </ul>
-        </nav>
+        <!-- Navigation wrapper -->
+        <div class="nav-wrapper">
+          <!-- center: language selector (EN | CS) -->
+          <div class="language-select" aria-label="Language selection">
+            <a href="#en">EN</a> <span aria-hidden="true">|</span>
+            <a href="#cs">CS</a>
+          </div>
+
+          <!-- right: navigation -->
+          <nav class="primary-nav" aria-label="Primary navigation">
+            <ul class="nav__list">
+              <li><a href="#top">HOME</a></li>
+              <li><a href="#services">SERVICES</a></li>
+              <li><a href="#about">ABOUT ME</a></li>
+              <li><a href="#contact">CONTACT</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
 
@@ -149,20 +170,26 @@
             <section id="philosophy" class="section-grid philosophy">
               <h2 class="section-title">My Philosophy</h2>
 
+              <p class="section-text">
+                At MV Nutrition, I believe that nutrition goes beyond food —
+                it’s about creating a lifestyle that works for YOU.
+              </p>
+
               <img
                 class="section-image philosophy-image"
                 src="assets/images/philosophy.jpg"
                 alt="Calm interior"
               />
-
-              <p class="section-text">
-                At MV Nutrition, I believe that nutrition goes beyond food —
-                it’s about creating a lifestyle that works for YOU.
-              </p>
             </section>
 
             <section id="approach" class="section-grid approach">
               <h2 class="section-title">My Approach</h2>
+
+              <img
+                class="section-image approach-image"
+                src="assets/images/approach.jpg"
+                alt="Preparing healthy meal"
+              />
 
               <ul class="section-list">
                 <li>
@@ -182,12 +209,6 @@
                   solutions for busy individuals and families.
                 </li>
               </ul>
-
-              <img
-                class="section-image approach-image"
-                src="assets/images/approach.jpg"
-                alt="Preparing healthy meal"
-              />
             </section>
           </section>
 
@@ -306,7 +327,26 @@
     </main>
     <footer class="site-footer" aria-label="Footer">
       <div class="container">
-        <nav aria-label="Footer navigation">
+        <!-- Mobile menu toggle for footer -->
+        <input
+          type="checkbox"
+          id="footer-menu-toggle"
+          class="footer-menu-toggle"
+          aria-label="Toggle footer menu"
+        />
+        <label
+          for="footer-menu-toggle"
+          class="footer-menu-icon"
+          aria-label="Footer Menu"
+        >
+          <span class="footer-burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </label>
+
+        <nav aria-label="Footer navigation" class="footer-nav-wrapper">
           <ul class="footer__nav">
             <li><a href="#top">HOME</a></li>
             <li><a href="#services">SERVICES</a></li>
