@@ -10,72 +10,27 @@
       href="https://fonts.googleapis.com/css2?family=Oooh+Baby&family=Roboto:wght@400;600;800&display=swap"
       rel="stylesheet"
     />
+
     <title>Michaela Valik — Balance Your Lifestyle</title>
     <script src="scripts/menu.js" defer></script>
+    <script src="scripts/components.js" defer></script>
   </head>
   <body>
-    <header class="header">
-      <div class="container header__content">
-        <!-- left: brand -->
-        <a class="brand" href="#">
-          <img
-            class="brand__logo"
-            src="assets/logo.png"
-            alt="Michaela Valik logo"
-          />
-          <div class="brand__text">
-            <span class="brand__name">MICHAELA VALIK</span>
-            <span class="brand__tagline">Balance Your Lifestyle</span>
-          </div>
-        </a>
+    <!-- HEADER SECTION  -->
+    <div id="header-placeholder"></div>
 
-        <!-- Mobile menu toggle -->
-        <input
-          type="checkbox"
-          id="mobile-menu-toggle"
-          class="mobile-menu-toggle"
-          aria-label="Toggle mobile menu"
-        />
-        <label
-          for="mobile-menu-toggle"
-          class="mobile-menu-icon"
-          aria-label="Menu"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </label>
-
-        <!-- Navigation wrapper -->
-        <div class="nav-wrapper">
-          <!-- center: language selector (EN | CS) -->
-          <div class="language-select" aria-label="Language selection">
-            <a href="#en">EN</a> <span aria-hidden="true">|</span>
-            <a href="#cs">CS</a>
-          </div>
-
-          <!-- right: navigation -->
-          <nav class="primary-nav" aria-label="Primary navigation">
-            <ul class="nav__list">
-              <li><a href="#top">HOME</a></li>
-              <li><a href="#services">SERVICES</a></li>
-              <li><a href="#about">ABOUT ME</a></li>
-              <li><a href="#contact">CONTACT</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
-
+    <!-- MAIN CONTENT AREA -->
     <main id="top">
-      <!-- hero is full-width edge-to-edge -->
+      <!-- HERO SECTION -->
       <section class="hero">
         <div class="hero__frame">
+          <!-- Hero image -->
           <img
             class="hero__image"
             src="assets/images/hero.jpg"
             alt="Hero: Michaela Valik"
           />
+          <!-- Hero text -->
           <div class="hero__text" aria-hidden="false">
             <p>Do you want to lose weight without dieting?</p>
             <p>Do you want more energy every day?</p>
@@ -84,6 +39,7 @@
         </div>
       </section>
 
+      <!-- INTRO SECTION -->
       <section class="intro">
         <div class="container-narrow">
           <blockquote class="intro__quote">
@@ -92,9 +48,12 @@
             personalised plans that work for YOU.”
           </blockquote>
 
+          <!-- Two-column grid: Text content on left, photo on right (desktop) -->
           <div class="intro__grid">
+            <!-- Left column: Text content -->
             <div class="intro__content">
               <h2 class="intro__heading">Welcome to MV Nutrition</h2>
+
               <p class="intro__description">
                 I help you achieve sustainable results by building a healthy
                 relationship with food and making mindful lifestyle adjustments.
@@ -103,6 +62,8 @@
               </p>
 
               <h3>How I Can Help You:</h3>
+
+              <!-- Benefits list -->
               <ul class="intro__list">
                 <li>Lose weight without restrictive diets</li>
                 <li>Boost your energy</li>
@@ -112,11 +73,13 @@
                 <li>Feel your best with expert tips and advice</li>
               </ul>
 
+              <!-- Call-to-action text in decorative font -->
               <p class="intro__cta">
                 Balance your lifestyle with a plan that works for YOU!
               </p>
             </div>
 
+            <!-- Right column: Photo with decorative frame -->
             <figure class="photo-frame" aria-hidden="true">
               <img
                 class="photo-frame__image"
@@ -126,6 +89,7 @@
             </figure>
           </div>
 
+          <!-- SERVICES SECTION -->
           <section
             class="services"
             id="services"
@@ -133,7 +97,9 @@
           >
             <h2 id="services-heading" class="section-heading">Services</h2>
 
+            <!-- Grid of service cards (1 column mobile, 2 on tablet, 3 on desktop) -->
             <div class="services__grid">
+              <!-- Service Card 1 -->
               <article class="service-card" aria-labelledby="svc1">
                 <h3 id="svc1">Initial Consultation</h3>
                 <p>
@@ -143,6 +109,7 @@
                 </p>
               </article>
 
+              <!-- Service Card 2 -->
               <article class="service-card" aria-labelledby="svc2">
                 <h3 id="svc2">One‑on‑One Coaching (4 Weeks)</h3>
                 <p>
@@ -152,6 +119,7 @@
                 </p>
               </article>
 
+              <!-- Service Card 3 -->
               <article class="service-card" aria-labelledby="svc3">
                 <h3 id="svc3">Macrocoaching</h3>
                 <p>
@@ -161,12 +129,15 @@
               </article>
             </div>
 
+            <!-- Call-to-action link -->
             <div class="cta-container">
               <a class="cta-link" href="#contact">Learn More</a>
             </div>
           </section>
 
+          <!-- PHILOSOPHY & APPROACH SECTION -->
           <section id="philosophy-approach" class="focus">
+            <!-- Philosophy subsection -->
             <section id="philosophy" class="section-grid philosophy">
               <h2 class="section-title">My Philosophy</h2>
 
@@ -182,6 +153,7 @@
               />
             </section>
 
+            <!-- Approach subsection -->
             <section id="approach" class="section-grid approach">
               <h2 class="section-title">My Approach</h2>
 
@@ -191,6 +163,7 @@
                 alt="Preparing healthy meal"
               />
 
+              <!-- List of approach points with custom star bullets (⊹) -->
               <ul class="section-list">
                 <li>
                   <strong>Small Changes, Big Impact:</strong> Simple, manageable
@@ -212,72 +185,32 @@
             </section>
           </section>
 
+          <!-- Client reviews in card layout -->
+
           <section id="testimonials" class="section testimonials">
             <div class="container">
               <h2 class="section-title centre">What clients say</h2>
 
+              <!-- Grid of testimonial cards (1 column mobile, 2 on tablet, 3 on desktop) -->
               <div class="testimonials__grid">
+                <!-- Testimonial Card 1 -->
                 <figure class="testimonial-card">
-                  <div class="stars" aria-label="5 out of 5 stars">
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path
-                        d="M12 17.3l-6.16 3.46 1.18-6.88L1.99 8.8l6.9-1 3.09-6.27 3.09 6.27 6.9 1-4.99 5.08 1.18 6.88z"
-                      />
-                    </svg>
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path
-                        d="M12 17.3l-6.16 3.46 1.18-6.88L1.99 8.8l6.9-1 3.09-6.27 3.09 6.27 6.9 1-4.99 5.08 1.18 6.88z"
-                      />
-                    </svg>
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path
-                        d="M12 17.3l-6.16 3.46 1.18-6.88L1.99 8.8l6.9-1 3.09-6.27 3.09 6.27 6.9 1-4.99 5.08 1.18 6.88z"
-                      />
-                    </svg>
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path
-                        d="M12 17.3l-6.16 3.46 1.18-6.88L1.99 8.8l6.9-1 3.09-6.27 3.09 6.27 6.9 1-4.99 5.08 1.18 6.88z"
-                      />
-                    </svg>
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path
-                        d="M12 17.3l-6.16 3.46 1.18-6.88L1.99 8.8l6.9-1 3.09-6.27 3.09 6.27 6.9 1-4.99 5.08 1.18 6.88z"
-                      />
-                    </svg>
-                  </div>
+                  <!-- 5-star rating display -->
+                  <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                  <!-- Client's testimonial text -->
                   <blockquote>
                     After years of restrictive diets and yo-yo effects, I sought
                     professional help. Michaela created a flexible, balanced
                     plan that made a huge difference. I now enjoy food without
                     guilt and feel healthier and more confident!
                   </blockquote>
+                  <!-- Client name -->
                   <figcaption>— Sophie L.</figcaption>
                 </figure>
 
+                <!-- Testimonial Card 2 -->
                 <figure class="testimonial-card">
-                  <div class="stars" aria-label="5 out of 5 stars">
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path
-                        d="M12 17.3l-6.16 3.46 1.18-6.88L1.99 8.8l6.9-1 3.09-6.27 3.09 6.27 6.9 1-4.99 5.08 1.18 6.88z"
-                      /></svg
-                    ><svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path
-                        d="M12 17.3l-6.16 3.46 1.18-6.88L1.99 8.8l6.9-1 3.09-6.27 3.09 6.27 6.9 1-4.99 5.08 1.18 6.88z"
-                      /></svg
-                    ><svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path
-                        d="M12 17.3l-6.16 3.46 1.18-6.88L1.99 8.8l6.9-1 3.09-6.27 3.09 6.27 6.9 1-4.99 5.08 1.18 6.88z"
-                      /></svg
-                    ><svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path
-                        d="M12 17.3l-6.16 3.46 1.18-6.88L1.99 8.8l6.9-1 3.09-6.27 3.09 6.27 6.9 1-4.99 5.08 1.18 6.88z"
-                      /></svg
-                    ><svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path
-                        d="M12 17.3l-6.16 3.46 1.18-6.88L1.99 8.8l6.9-1 3.09-6.27 3.09 6.27 6.9 1-4.99 5.08 1.18 6.88z"
-                      />
-                    </svg>
-                  </div>
+                  <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
                   <blockquote>
                     Michaela is the best! She designed a stress-free,
                     sustainable plan that helped me reach my goals faster than
@@ -287,30 +220,9 @@
                   <figcaption>— Peter H.</figcaption>
                 </figure>
 
+                <!-- Testimonial Card 3 -->
                 <figure class="testimonial-card">
-                  <div class="stars" aria-label="5 out of 5 stars">
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path
-                        d="M12 17.3l-6.16 3.46 1.18-6.88L1.99 8.8l6.9-1 3.09-6.27 3.09 6.27 6.9 1-4.99 5.08 1.18 6.88z"
-                      /></svg
-                    ><svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path
-                        d="M12 17.3l-6.16 3.46 1.18-6.88L1.99 8.8l6.9-1 3.09-6.27 3.09 6.27 6.9 1-4.99 5.08 1.18 6.88z"
-                      /></svg
-                    ><svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path
-                        d="M12 17.3l-6.16 3.46 1.18-6.88L1.99 8.8l6.9-1 3.09-6.27 3.09 6.27 6.9 1-4.99 5.08 1.18 6.88z"
-                      /></svg
-                    ><svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path
-                        d="M12 17.3l-6.16 3.46 1.18-6.88L1.99 8.8l6.9-1 3.09-6.27 3.09 6.27 6.9 1-4.99 5.08 1.18 6.88z"
-                      /></svg
-                    ><svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path
-                        d="M12 17.3l-6.16 3.46 1.18-6.88L1.99 8.8l6.9-1 3.09-6.27 3.09 6.27 6.9 1-4.99 5.08 1.18 6.88z"
-                      />
-                    </svg>
-                  </div>
+                  <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
                   <blockquote>
                     Michaela’s 3-month plan was life-changing! I finally feel
                     confident in my body. Her easy, delicious meal plans helped
@@ -325,36 +237,8 @@
         </div>
       </section>
     </main>
-    <footer class="site-footer" aria-label="Footer">
-      <div class="container">
-        <!-- Mobile menu toggle for footer -->
-        <input
-          type="checkbox"
-          id="footer-menu-toggle"
-          class="footer-menu-toggle"
-          aria-label="Toggle footer menu"
-        />
-        <label
-          for="footer-menu-toggle"
-          class="footer-menu-icon"
-          aria-label="Footer Menu"
-        >
-          <span class="footer-burger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
-        </label>
 
-        <nav aria-label="Footer navigation" class="footer-nav-wrapper">
-          <ul class="footer__nav">
-            <li><a href="#top">HOME</a></li>
-            <li><a href="#services">SERVICES</a></li>
-            <li><a href="#about">ABOUT ME</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-          </ul>
-        </nav>
-      </div>
-    </footer>
+    <!-- FOOTER SECTION -->
+    <div id="footer-placeholder"></div>
   </body>
 </html>

@@ -1,39 +1,39 @@
-// Close mobile menu when a navigation link is clicked
-document.addEventListener('DOMContentLoaded', function () {
-  // Header mobile menu
-  const mobileMenuToggle = document.getElementById('mobile-menu-toggle')
-  const navLinks = document.querySelectorAll('.nav__list a, .language-select a')
+// Ensure mobile menus close when a link is clicked or when clicking away
+document.addEventListener('DOMContentLoaded', () => {
+  /**
+   * Attach click handlers to links so they close a checkbox-controlled menu.
+   * @param {string} toggleId - The checkbox input controlling visibility
+   * @param {string} linkSelector - Selector for all links that should close the menu
+   */
+  function attachMenuAutoClose(toggleId, linkSelector) {
+    const toggle = document.getElementById(toggleId)
+    if (!toggle) return
 
-  navLinks.forEach((link) => {
-    link.addEventListener('click', () => {
-      if (mobileMenuToggle && mobileMenuToggle.checked) {
-        mobileMenuToggle.checked = false
-      }
+    document.querySelectorAll(linkSelector).forEach((link) => {
+      link.addEventListener('click', () => {
+        if (toggle.checked) toggle.checked = false
+      })
     })
-  })
+    return toggle
+  }
 
-  // Footer mobile menu
-  const footerMenuToggle = document.getElementById('footer-menu-toggle')
-  const footerLinks = document.querySelectorAll('.footer__nav a')
+  // Header: close when any nav or language link is clicked
+  const mobileMenuToggle = attachMenuAutoClose(
+    'mobile-menu-toggle',
+    '.nav__list a, .language-select a'
+  )
 
-  footerLinks.forEach((link) => {
-    link.addEventListener('click', () => {
-      if (footerMenuToggle && footerMenuToggle.checked) {
-        footerMenuToggle.checked = false
-      }
-    })
-  })
+  // Footer: close when any footer link is clicked
+  attachMenuAutoClose('footer-menu-toggle', '.footer__nav a')
 
-  // Close menu when clicking outside (on overlay)
+  // Close header menu when clicking around the burger area (same behaviour as before)
   const mobileMenuIcon = document.querySelector('.mobile-menu-icon')
-  if (mobileMenuIcon) {
+  if (mobileMenuIcon && mobileMenuToggle) {
     mobileMenuIcon.addEventListener('click', (e) => {
-      // Only handle clicks on the overlay pseudo-element area
       if (e.target === mobileMenuIcon && mobileMenuToggle.checked) {
         const rect = mobileMenuIcon.getBoundingClientRect()
         const clickX = e.clientX
-
-        // If click is far from the burger icon itself, close menu
+        // If click is far from the icon, treat as outside and close
         if (clickX < rect.left - 50 || clickX > rect.right + 50) {
           mobileMenuToggle.checked = false
         }
