@@ -229,6 +229,11 @@ body {
   border-bottom-color: var(--color-purple);
 }
 
+.language-select a.active {
+  font-weight: 600;
+  border-bottom-color: var(--color-purple);
+}
+
 /* ===================================================================
    HERO SECTION
    =================================================================== */
@@ -944,7 +949,7 @@ h3,
 
 .services-top-image {
   margin: 0 auto var(--spacing-5xl) auto;
-  max-width: 700px;
+  max-width: 400px;
   text-align: center;
   position: relative;
   overflow: visible;
@@ -1551,7 +1556,7 @@ h3,
 
 .contact-image {
   width: 100%;
-  max-width: 400px;
+  max-width: 300px;
   margin: 0 auto;
 }
 

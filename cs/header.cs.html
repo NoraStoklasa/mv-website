@@ -1,0 +1,49 @@
+<!-- HEADER SECTION  -->
+<header class="header">
+  <div class="container header__content">
+    <a class="brand" href="index.cs.html">
+      <img
+        class="brand__logo"
+        src="../assets/logo.png"
+        alt="Michaela Valik logo"
+      />
+      <div class="brand__text">
+        <span class="brand__name">MICHAELA VALIK</span>
+        <span class="brand__tagline">Balance Your Lifestyle</span>
+      </div>
+    </a>
+
+    <!-- Hidden checkbox controls the menu open/close state -->
+    <input
+      type="checkbox"
+      id="mobile-menu-toggle"
+      class="mobile-menu-toggle"
+      aria-label="Toggle mobile menu"
+    />
+    <!-- Label styles the burger icon and connects it to the checkbox -->
+    <label for="mobile-menu-toggle" class="mobile-menu-icon" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <!-- Navigation wrapper: Contains language selector and main menu -->
+    <div class="nav-wrapper">
+      <!-- Language selector: Switch between English and Czech -->
+      <div class="language-select" aria-label="Language selection">
+        <a href="#en">EN</a> <span aria-hidden="true">|</span>
+        <a href="#cs">CZ</a>
+      </div>
+
+      <!-- Main navigation menu -->
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <ul class="nav__list">
+          <li><a href="index.cs.html#top">DOMŮ</a></li>
+          <li><a href="services.cs.html">SLUŽBY</a></li>
+          <li><a href="about.cs.html">O MNĚ</a></li>
+          <li><a href="contact.cs.html">KONTAKT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

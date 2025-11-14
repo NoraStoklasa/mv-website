@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oooh+Baby&family=Roboto:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="../assets/logo.png" />
+
+    <title>Contact — Michaela Valik</title>
+    <script src="../scripts/language.js" defer></script>
+    <script src="../scripts/menu.js" defer></script>
+    <script src="../scripts/components.js" defer></script>
+  </head>
+  <body>
+    <!-- HEADER SECTION  -->
+    <div id="header-placeholder"></div>
+
+    <!-- MAIN CONTENT AREA -->
+    <main id="top">
+      <section class="contact-page">
+        <div class="container-narrow">
+          <h1 class="page-heading">Contact</h1>
+
+          <div class="contact-content">
+            <!-- Left column: Contact info and image -->
+            <div class="contact-info">
+              <div class="contact-details">
+                <p class="contact-phone">
+                  <a href="tel:+61422811052">+61 422811052</a>
+                </p>
+                <p class="contact-email">
+                  <a href="mailto:info@michaelavalik.com"
+                    >info@michaelavalik.com</a
+                  >
+                </p>
+                <p class="contact-social">
+                  <a
+                    href="https://instagram.com/michaelavalik"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >@michaela_valik</a
+                  >
+                </p>
+              </div>
+
+              <figure class="contact-image">
+                <img
+                  src="../assets/images/contact.jpg"
+                  alt="Michaela Valik"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+
+            <!-- Right column: Contact form -->
+            <div class="contact-form-wrapper">
+              <form class="contact-form" action="#" method="POST">
+                <div class="form-group">
+                  <label for="name"
+                    >Name <span class="required">(required)</span></label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    aria-required="true"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="email"
+                    >Email <span class="required">(required)</span></label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    aria-required="true"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="message"
+                    >Message <span class="required">(required)</span></label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="8"
+                    required
+                    aria-required="true"
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="submit-button">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <div id="footer-placeholder"></div>
+  </body>
+</html>
