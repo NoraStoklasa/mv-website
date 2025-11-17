@@ -652,7 +652,7 @@ h3,
 .legal-footer {
   text-align: center;
   padding: var(--spacing-xl) 0;
-  font-size: var(--font-size-base);
+  font-size: 12px;
   color: var(--color-ink);
   font-family: var(--font-primary);
 }
