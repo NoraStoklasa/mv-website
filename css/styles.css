@@ -844,6 +844,27 @@ h3,
   color: var(--color-purple);
 }
 
+/* Nested sub-list for service-detail__includes */
+.service-detail__includes ul {
+  list-style: none;
+  margin: var(--spacing-sm) 0 var(--spacing-md) 0;
+  padding-left: var(--spacing-3xl);
+}
+.service-detail__includes ul li {
+  font-size: 15px;
+  color: var(--color-ink);
+  margin-bottom: var(--spacing-xs);
+  position: relative;
+  padding-left: 1.2em;
+}
+.service-detail__includes ul li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--color-mint);
+  font-size: 1.2em;
+}
+
 /* Price styling */
 .service-detail__price {
   margin-top: var(--spacing-2xl);
