@@ -4,30 +4,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Michaela Valik — Balance Your Lifestyle</title>
-  </head>
-
-  <body>
-    <p>Redirecting...</p>
-
-    <!-- Hidden Netlify form definitions -->
-    <form name="contact-czech" method="POST" netlify hidden>
-      <input type="text" name="name" />
-      <input type="email" name="email" />
-      <textarea name="message"></textarea>
-    </form>
-
-    <form name="contact" method="POST" netlify hidden>
-      <input type="text" name="name" />
-      <input type="email" name="email" />
-      <textarea name="message"></textarea>
-    </form>
-
-    <!-- Redirect AFTER forms so Netlify can see them -->
     <script>
+      // Redirect to language-specific version
       const DEFAULT_LANGUAGE = 'en'
       const storedLang =
         localStorage.getItem('preferredLanguage') || DEFAULT_LANGUAGE
       window.location.href = `/${storedLang}/index.${storedLang}.html`
     </script>
+  </head>
+  <body>
+    <p>Redirecting...</p>
   </body>
 </html>
