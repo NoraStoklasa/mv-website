@@ -17,8 +17,9 @@
     <script src="../scripts/menu.js" defer></script>
     <script src="../scripts/components.js" defer></script>
   </head>
+
   <body>
-    <!-- HEADER SECTION  -->
+    <!-- HEADER SECTION -->
     <div id="header-placeholder"></div>
 
     <!-- MAIN CONTENT AREA -->
@@ -35,8 +36,8 @@
                   <a href="tel:+61422811052">+61 422811052</a>
                 </p>
                 <p class="contact-email">
-                  <a href="mailto:info@michaelavalik.com"
-                    >info@michaelavalik.com</a
+                  <a href="mailto:michaelavalik@gmail.com"
+                    >michaelavalik@gmail.com</a
                   >
                 </p>
                 <p class="contact-social">
@@ -60,11 +61,20 @@
 
             <!-- Right column: Contact form -->
             <div class="contact-form-wrapper">
-              <form class="contact-form" action="#" method="POST">
+              <!-- ✅ NETLIFY WORKING FORM -->
+              <form
+                name="contact"
+                class="contact-form"
+                method="POST"
+                data-netlify="true"
+              >
+                <!-- required hidden field for Netlify -->
+                <input type="hidden" name="form-name" value="contact" />
+
                 <div class="form-group">
-                  <label for="name"
-                    >Name <span class="required">(required)</span></label
-                  >
+                  <label for="name">
+                    Name <span class="required">(required)</span>
+                  </label>
                   <input
                     type="text"
                     id="name"
@@ -75,9 +85,9 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="email"
-                    >Email <span class="required">(required)</span></label
-                  >
+                  <label for="email">
+                    Email <span class="required">(required)</span>
+                  </label>
                   <input
                     type="email"
                     id="email"
@@ -88,9 +98,9 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="message"
-                    >Message <span class="required">(required)</span></label
-                  >
+                  <label for="message">
+                    Message <span class="required">(required)</span>
+                  </label>
                   <textarea
                     id="message"
                     name="message"
