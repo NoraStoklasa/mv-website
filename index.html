@@ -12,7 +12,21 @@
       window.location.href = `/${storedLang}/index.${storedLang}.html`
     </script>
   </head>
+
   <body>
     <p>Redirecting...</p>
+
+    <!-- Hidden Netlify form definitions -->
+    <form name="contact-czech" method="POST" netlify hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+    </form>
+
+    <form name="contact" method="POST" netlify hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+    </form>
   </body>
 </html>
