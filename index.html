@@ -4,13 +4,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Michaela Valik — Balance Your Lifestyle</title>
-    <script>
-      // Redirect to language-specific version
-      const DEFAULT_LANGUAGE = 'en'
-      const storedLang =
-        localStorage.getItem('preferredLanguage') || DEFAULT_LANGUAGE
-      window.location.href = `/${storedLang}/index.${storedLang}.html`
-    </script>
   </head>
 
   <body>
@@ -28,5 +21,13 @@
       <input type="email" name="email" />
       <textarea name="message"></textarea>
     </form>
+
+    <!-- Redirect AFTER forms so Netlify can see them -->
+    <script>
+      const DEFAULT_LANGUAGE = 'en'
+      const storedLang =
+        localStorage.getItem('preferredLanguage') || DEFAULT_LANGUAGE
+      window.location.href = `/${storedLang}/index.${storedLang}.html`
+    </script>
   </body>
 </html>
