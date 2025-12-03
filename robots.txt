@@ -1,0 +1,13 @@
+# robots.txt for michaelavalik.com
+
+User-agent: *
+Allow: /
+
+# Disallow access to script files
+Disallow: /scripts/
+
+# Sitemap location
+Sitemap: https://michaelavalik.com/sitemap.xml
+
+# Crawl delay (optional - adjust if needed)
+Crawl-delay: 1
