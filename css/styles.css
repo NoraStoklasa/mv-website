@@ -748,7 +748,7 @@ h3,
   font-size: var(--font-size-4xl);
   color: var(--color-purple);
   text-align: center;
-  margin-bottom: var(--spacing-5xl);
+  margin-bottom: 0;
 }
 
 /* Service detail cards */
