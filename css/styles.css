@@ -86,9 +86,36 @@ body {
 
 .header__content {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   width: 100%;
   justify-content: space-between;
+}
+
+/* Tagline: own centred row on mobile, under EN | CZ on tablet+ */
+.header__tagline {
+  flex-basis: 100%;
+  margin: var(--spacing-md) 0 0;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+  color: var(--color-purple);
+}
+
+/* Hidden on screen, still read by Google and screen readers */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .brand {
@@ -1213,11 +1240,19 @@ h3,
     padding: var(--spacing-md) var(--spacing-3xl);
   }
 
-  /* Header: Restore 3-column grid */
+  /* Header: 3-column grid — brand | EN/CZ + tagline | menu */
   .header__content {
     display: grid;
     grid-template-columns: auto 1fr auto;
-    gap: var(--spacing-2xl);
+    column-gap: var(--spacing-2xl);
+    row-gap: var(--spacing-sm);
+  }
+
+  /* Tablet: tagline gets its own full-width row */
+  .header__tagline {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    margin: 0;
   }
 
   /* Brand: Restore full logo size */
@@ -1230,8 +1265,9 @@ h3,
     display: none;
   }
 
-  /* Navigation: Reset to normal flow */
+  /* Navigation: let EN/CZ and the menu sit directly in the header grid */
   .nav-wrapper {
+    display: contents;
     position: static;
     width: auto;
     max-width: none;
@@ -1239,11 +1275,18 @@ h3,
     background: transparent;
     box-shadow: none;
     padding: 0;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: var(--spacing-2xl);
     flex-direction: row;
     overflow-y: visible;
+  }
+
+  .language-select {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .primary-nav {
+    grid-column: 3;
+    grid-row: 1;
   }
 
   /* Navigation: Restore horizontal layout */
@@ -1482,6 +1525,16 @@ h3,
    =================================================================== */
 
 @media (min-width: 1024px) {
+  /* Header: tagline sits under EN | CZ, brand and menu span both rows */
+  .brand,
+  .primary-nav {
+    grid-row: 1 / span 2;
+  }
+
+  .header__tagline {
+    grid-column: 2;
+  }
+
   /* Layout: Full desktop padding */
   .container,
   .container-narrow {
