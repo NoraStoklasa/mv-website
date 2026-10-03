@@ -13,7 +13,15 @@ function getCurrentLanguage() {
   const path = window.location.pathname
   if (path.includes('/cs/')) return LANGUAGES.CS
   if (path.includes('/en/')) return LANGUAGES.EN
+  // The site root is the English homepage
+  if (path === '/' || path === '/index.html') return LANGUAGES.EN
   return null
+}
+
+// Build the URL of a page in a given language (English homepage lives at /)
+function getPageUrl(lang, page) {
+  if (lang === LANGUAGES.EN && page === 'index') return '/'
+  return `/${lang}/${page}.${lang}.html`
 }
 
 // Get stored language preference from localStorage
@@ -47,7 +55,7 @@ function switchLanguage(targetLang) {
   }
 
   // Build new URL
-  const newPath = `/${targetLang}/${currentPage}.${targetLang}.html`
+  const newPath = getPageUrl(targetLang, currentPage)
 
   // Store preference
   setStoredLanguage(targetLang)
@@ -68,7 +76,7 @@ function checkLanguagePreference() {
     // If not on any language path, redirect to default
     if (!currentLang) {
       const currentPage = getCurrentPage()
-      window.location.href = `/${DEFAULT_LANGUAGE}/${currentPage}.${DEFAULT_LANGUAGE}.html`
+      window.location.href = getPageUrl(DEFAULT_LANGUAGE, currentPage)
     }
     return
   }
@@ -76,13 +84,13 @@ function checkLanguagePreference() {
   // If stored preference differs from current language, redirect
   if (currentLang && storedLang !== currentLang) {
     const currentPage = getCurrentPage()
-    window.location.href = `/${storedLang}/${currentPage}.${storedLang}.html`
+    window.location.href = getPageUrl(storedLang, currentPage)
   }
 
   // If not on any language path, redirect to stored preference
   if (!currentLang) {
     const currentPage = getCurrentPage()
-    window.location.href = `/${storedLang}/${currentPage}.${storedLang}.html`
+    window.location.href = getPageUrl(storedLang, currentPage)
   }
 }
 

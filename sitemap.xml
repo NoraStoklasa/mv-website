@@ -4,37 +4,43 @@
 
   <!-- English Pages -->
   <url>
-    <loc>https://michaelavalik.com/en/index.en.html</loc>
+    <loc>https://michaelavalik.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://michaelavalik.com/"/>
     <xhtml:link rel="alternate" hreflang="cs" href="https://michaelavalik.com/cs/index.cs.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://michaelavalik.com/en/index.en.html"/>
-    <lastmod>2025-12-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://michaelavalik.com/"/>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
-  <url>
-    <loc>https://michaelavalik.com/en/about.en.html</loc>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://michaelavalik.com/cs/about.cs.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://michaelavalik.com/en/about.en.html"/>
-    <lastmod>2025-12-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
   <url>
     <loc>https://michaelavalik.com/en/services.en.html</loc>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://michaelavalik.com/cs/services.cs.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://michaelavalik.com/en/services.en.html"/>
-    <lastmod>2025-12-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://michaelavalik.com/cs/services.cs.html"/>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-
+  <url>
+    <loc>https://michaelavalik.com/en/about.en.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://michaelavalik.com/en/about.en.html"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://michaelavalik.com/cs/about.cs.html"/>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://michaelavalik.com/en/ebooks.en.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://michaelavalik.com/en/ebooks.en.html"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://michaelavalik.com/cs/ebooks.cs.html"/>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://michaelavalik.com/en/contact.en.html</loc>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://michaelavalik.com/cs/contact.cs.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://michaelavalik.com/en/contact.en.html"/>
-    <lastmod>2025-12-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://michaelavalik.com/cs/contact.cs.html"/>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -42,36 +48,42 @@
   <!-- Czech Pages -->
   <url>
     <loc>https://michaelavalik.com/cs/index.cs.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://michaelavalik.com/"/>
     <xhtml:link rel="alternate" hreflang="cs" href="https://michaelavalik.com/cs/index.cs.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://michaelavalik.com/en/index.en.html"/>
-    <lastmod>2025-12-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://michaelavalik.com/"/>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
-  <url>
-    <loc>https://michaelavalik.com/cs/about.cs.html</loc>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://michaelavalik.com/cs/about.cs.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://michaelavalik.com/en/about.en.html"/>
-    <lastmod>2025-12-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
   <url>
     <loc>https://michaelavalik.com/cs/services.cs.html</loc>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://michaelavalik.com/cs/services.cs.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://michaelavalik.com/en/services.en.html"/>
-    <lastmod>2025-12-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://michaelavalik.com/cs/services.cs.html"/>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-
+  <url>
+    <loc>https://michaelavalik.com/cs/about.cs.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://michaelavalik.com/en/about.en.html"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://michaelavalik.com/cs/about.cs.html"/>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://michaelavalik.com/cs/ebooks.cs.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://michaelavalik.com/en/ebooks.en.html"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://michaelavalik.com/cs/ebooks.cs.html"/>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://michaelavalik.com/cs/contact.cs.html</loc>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://michaelavalik.com/cs/contact.cs.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://michaelavalik.com/en/contact.en.html"/>
-    <lastmod>2025-12-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://michaelavalik.com/cs/contact.cs.html"/>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
