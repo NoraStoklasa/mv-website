@@ -1,6 +1,66 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="cs">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-0D0ZH20DDS"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+
+      gtag('config', 'G-0D0ZH20DDS')
+      gtag('config', 'G-Y417GM61K7')
+      gtag('config', 'G-MB391NTK9E')
+    </script>
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments)
+        }
+        if (!f._fbq) f._fbq = n
+        n.push = n
+        n.loaded = !0
+        n.version = '2.0'
+        n.queue = []
+        t = b.createElement(e)
+        t.async = !0
+        t.src = v
+        s = b.getElementsByTagName(e)[0]
+        s.parentNode.insertBefore(t, s)
+      })(
+        window,
+        document,
+        'script',
+        'https://connect.facebook.net/en_US/fbevents.js',
+      )
+      fbq('init', '25771797335833558')
+      fbq('init', '1638041554090509')
+      fbq('track', 'PageView')
+    </script>
+    <noscript>
+      <img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=25771797335833558&ev=PageView&noscript=1"
+      />
+      <img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=1638041554090509&ev=PageView&noscript=1"
+      />
+    </noscript>
+    <!-- End Meta Pixel Code -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta
@@ -46,10 +106,22 @@
       name="twitter:image"
       content="https://michaelavalik.com/assets/images/hero.jpg"
     />
-    <link rel="canonical" href="https://michaelavalik.com/cs/index.cs.html">
-    <link rel="alternate" hreflang="cs" href="https://michaelavalik.com/cs/index.cs.html">
-    <link rel="alternate" hreflang="en" href="https://michaelavalik.com/en/index.en.html">
-    <link rel="alternate" hreflang="x-default" href="https://michaelavalik.com/en/index.en.html">
+    <link rel="canonical" href="https://michaelavalik.com/cs/index.cs.html" />
+    <link
+      rel="alternate"
+      hreflang="cs"
+      href="https://michaelavalik.com/cs/index.cs.html"
+    />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://michaelavalik.com/en/index.en.html"
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://michaelavalik.com/en/index.en.html"
+    />
 
     <!-- Alternate language versions -->
     <link rel="stylesheet" href="../css/styles.css" />
@@ -130,9 +202,18 @@
           />
           <!-- Hero text -->
           <div class="hero__text" aria-hidden="false">
-            <p>Chcete zhubnout bez drastických diet?</p>
-            <p>Toužíte po více energie každý den?</p>
-            <p>Chcete zdravé návyky, které zapadnou do vašeho života?</p>
+            <p class="hero__line">Nepotřebuješ další dietu.</p>
+            <p class="hero__line">
+              Potřebuješ plán, který
+              <span class="hero__handwritten">sedne do tvého života.</span>
+            </p>
+            <a
+              href="https://calendly.com/michaelavalik"
+              class="hero__btn"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Rezervuj si konzultaci</a
+            >
           </div>
         </div>
       </section>
@@ -153,28 +234,52 @@
               <h2 class="intro__heading">Vítejte v MV Nutrition</h2>
 
               <p class="intro__description">
-                Pomáhám lidem najít rovnováhu ve stravování a budovat zdravé
-                návyky pomocí individuálních plánů, které respektují jejich
-                životní styl. Společně vytvoříme změny, které budou mít smysl —
-                zaměříme se nejen na stravu, ale i na mentální a emoční stránku.
-                Výsledkem bude trvalá změna, ne jen krátkodobá dieta.
+                Pomáhám zaneprázdněným mámám najít jednoduché stravovací návyky,
+                které opravdu fungují. Bez restrikcí, bez hádání.
+              </p>
+              <p class="intro__description">
+                Můj přístup stojí na třech jasných pilířích:
+                <strong
+                  >hydratace, pravidelná vyvážená jídla a cílená
+                  suplementace</strong
+                >
+                podle tvých skutečných výsledků. Začínáme tam, kde se tvé tělo
+                právě teď nachází (včetně testování profilu Omega-3 mastných
+                kyselin, pokud chceš), a postavíme plán kolem tvého života, ne
+                podle pravidel někoho jiného.
               </p>
 
               <h3>Jak vám mohu pomoci:</h3>
 
               <!-- Benefits list -->
               <ul class="intro__list">
-                <li>Zhubnout bez omezování a zákazů</li>
-                <li>Mít víc energie a vitality</li>
-                <li>Vybudovat si zdravý vztah k jídlu</li>
-                <li>Naučit se jíst intuitivně a s lehkostí</li>
-                <li>Mít k dispozici jídelníčky sestavené na míru</li>
-                <li>Cítit se skvěle</li>
+                <li>
+                  <strong>Jasný plán, který funguje v reálném životě</strong>
+                </li>
+                <li>
+                  <strong>Suplementace na míru</strong> podle tvých výsledků, ne
+                  univerzální rady
+                </li>
+                <li>
+                  <strong>Podporu zaměřenou na prevenci:</strong> řešíme věci
+                  včas, ne až ve chvíli, kdy už jen hasíš požár.
+                </li>
+                <li>
+                  <strong>Jednoduchá skladba jídla:</strong> Bílkoviny,
+                  sacharidy, tuky, vláknina. Žádná pravidla, žádné výčitky.
+                </li>
               </ul>
 
               <!-- Call-to-action text in decorative font -->
               <p class="intro__cta">
                 Vyvažte svůj životní styl s plánem, který VÁM bude sedět!
+                <a
+                  href="https://calendly.com/michaelavalik"
+                  class="hero__btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Rezervuj si konzultaci</a
+                >
               </p>
             </div>
 
@@ -222,13 +327,12 @@
 
               <!-- Service Card 3 -->
               <article class="service-card" aria-labelledby="svc3">
-                <h3 id="svc3">Makro koučink</h3>
+                <h3 id="svc3">Výživový reset</h3>
                 <p>
-                  Pomohu vám najít správnou rovnováhu mezi bílkovinami, tuky a
-                  sacharidy tak, abyste měli optimální energii, výkonnost a
-                  celkovou pohodu — bez stresujícího počítání a omezování.
-                  Naučíte se, jak intuitivně naslouchat svému tělu a budovat
-                  zdravý, dlouhodobě udržitelný vztah k jídlu.
+                  Cítíte se unavení, zaseklí nebo prostě ne ve své kůži,
+                  přestože se snažíte jíst zdravě? Výživový reset začíná krevním
+                  testem, který odhalí, co se skutečně děje ve vašem těle, a na
+                  základě výsledků postavíme plán přesně pro vás.
                 </p>
               </article>
             </div>
