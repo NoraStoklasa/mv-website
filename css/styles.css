@@ -388,6 +388,13 @@ body {
   margin-bottom: var(--spacing-2xl);
 }
 
+/* Small location note under the Welcome "Book your consultation" button */
+.intro__location {
+  margin-top: calc(-1 * var(--spacing-xl));
+  font-size: 14px;
+  color: var(--color-purple);
+}
+
 .intro__list {
   margin: var(--spacing-xl) 0;
   padding-left: var(--spacing-2xl);
