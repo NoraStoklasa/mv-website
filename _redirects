@@ -9,3 +9,14 @@
 /index.en.html      /                     301!
 /cs                 /cs/index.cs.html     301!
 /cs/index.html      /cs/index.cs.html     301!
+
+# Pages without .html go to the .html version (the canonical address).
+/en/services.en   /en/services.en.html   301!
+/en/about.en      /en/about.en.html      301!
+/en/ebooks.en     /en/ebooks.en.html     301!
+/en/contact.en    /en/contact.en.html    301!
+/cs/index.cs      /cs/index.cs.html      301!
+/cs/services.cs   /cs/services.cs.html   301!
+/cs/about.cs      /cs/about.cs.html      301!
+/cs/ebooks.cs     /cs/ebooks.cs.html     301!
+/cs/contact.cs    /cs/contact.cs.html    301!
