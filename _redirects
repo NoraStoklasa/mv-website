@@ -1,6 +1,7 @@
 # Netlify redirects — https://docs.netlify.com/routing/redirects/
 # The English homepage lives at the site root.
 /en/index.en.html   /                     301!
+/index.html          /                     301!
 /en/index.en        /                     301!
 /en/index.html      /                     301!
 /en/index           /                     301!
