@@ -3,9 +3,9 @@
   var FORMSPREE = 'https://formspree.io/f/xwvyabvk';
 
   function init() {
-    var triggerBtn = document.querySelector('[data-ebook-trigger]');
+    var triggerBtns = document.querySelectorAll('[data-ebook-trigger]');
     var modal = document.getElementById('ebook-modal');
-    if (!triggerBtn || !modal) return;
+    if (!triggerBtns.length || !modal) return;
 
     var form = document.getElementById('ebook-form');
     var closeBtn = modal.querySelector('.ebook-modal__close');
@@ -13,8 +13,10 @@
     var status = modal.querySelector('.ebook-modal__status');
     var submitBtn = form.querySelector('.ebook-modal__submit');
     var originalLabel = submitBtn.textContent;
+    var currentTriggerBtn = null;
 
-    function openModal() {
+    function openModal(btn) {
+      currentTriggerBtn = btn;
       modal.removeAttribute('hidden');
       document.body.classList.add('modal-open');
       form.querySelector('input').focus();
@@ -26,7 +28,11 @@
       status.textContent = '';
     }
 
-    triggerBtn.addEventListener('click', openModal);
+    triggerBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        openModal(btn);
+      });
+    });
     closeBtn.addEventListener('click', closeModal);
     overlay.addEventListener('click', closeModal);
 
@@ -61,7 +67,7 @@
         .then(function (res) {
           if (res.ok) {
             var a = document.createElement('a');
-            a.href = triggerBtn.dataset.pdf;
+            a.href = currentTriggerBtn.dataset.pdf;
             a.download = '';
             document.body.appendChild(a);
             a.click();
